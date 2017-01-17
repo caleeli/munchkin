@@ -1,0 +1,291 @@
+.tablero {
+    position: relative;
+    display: inline-block;
+    width: 514px;
+    height: 372;
+}
+.puerta {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 90;
+}
+.tesoros {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 90;
+}
+.trash {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 90;
+    background-color: gray;
+}
+.mano {
+    position: relative;
+    display: inline-block;
+    width: 390px;
+    height: 90;
+    background-color: lightsalmon;
+}
+.puerta1 {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 86px;
+    height: 56px;
+    border: 1px solid black;
+    background-color: rgba(120,80,40,0.4);
+    background-size: 100% auto;
+    -webkit-transform: rotate(90deg) translate(15px, 15px);
+    -moz-transform: rotate(90deg) translate(15px, 15px);
+    -ms-transform: rotate(90deg) translate(15px, 15px);
+    -o-transform: rotate(90deg) translate(15px, 15px);
+    transform: rotate(90deg) translate(15px, 15px);
+}
+.tesoros1 {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 86px;
+    height: 56px;
+    border: 1px solid black;
+    background-color: rgba(120,80,40,0.4);
+    background-size: 100% auto;
+    -webkit-transform: rotate(90deg) translate(15px, 15px);
+    -moz-transform: rotate(90deg) translate(15px, 15px);
+    -ms-transform: rotate(90deg) translate(15px, 15px);
+    -o-transform: rotate(90deg) translate(15px, 15px);
+    transform: rotate(90deg) translate(15px, 15px);
+}
+.trash1 {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 86px;
+    height: 56px;
+    border: 1px solid black;
+    background-color: rgba(120,80,40,0.4);
+    background-size: 100% auto;
+    -webkit-transform: rotate(90deg) translate(15px, 15px);
+    -moz-transform: rotate(90deg) translate(15px, 15px);
+    -ms-transform: rotate(90deg) translate(15px, 15px);
+    -o-transform: rotate(90deg) translate(15px, 15px);
+    transform: rotate(90deg) translate(15px, 15px);
+}
+.mano1 {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 86px;
+    height: 56px;
+    border: 1px solid black;
+    background-color: rgba(120,80,40,0.4);
+    background-size: 100% auto;
+    -webkit-transform: rotate(90deg) translate(15px, 15px);
+    -moz-transform: rotate(90deg) translate(15px, 15px);
+    -ms-transform: rotate(90deg) translate(15px, 15px);
+    -o-transform: rotate(90deg) translate(15px, 15px);
+    transform: rotate(90deg) translate(15px, 15px);
+    margin-right: -32px;
+}
+img.tablero{
+    border:1px solid black;
+    width: 512px;
+    position: absolute;
+}
+.card-vertical{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 86px;
+    height: 56px;
+    background-color: rgba(120,80,40,0.2);
+    background-size: 100% auto;
+    -webkit-transform: rotate(90deg) translate(15px, 15px);
+    -moz-transform: rotate(90deg) translate(15px, 15px);
+    -ms-transform: rotate(90deg) translate(15px, 15px);
+    -o-transform: rotate(90deg) translate(15px, 15px);
+    transform: rotate(90deg) translate(15px, 15px);
+}
+.card-horizontal{
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: rgba(120,80,40,0.2);
+    position: absolute;
+    width: 86px;
+    height: 56px;
+    border: 1px solid black;
+}
+.character{
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 111px;
+    height: 85px;
+    border: 1px solid black;
+    left: 92px;
+    top: 38px;
+}
+
+.class1 {
+    left: 28px;
+    top: 55px;
+}
+.class2 {
+    left: 28px;
+    top: 77px;
+}
+.class3 {
+    left: 28px;
+    top: 99px;
+}
+.curse1 {
+    left: 334px;
+    top: 23px;
+}
+.curse2 {
+    left: 334px;
+    top: 44px;
+}
+
+.backpack1 {
+    left: 399px;
+    top: 34px;
+}
+.backpack2 {
+    left: 399px;
+    top: 95px;
+}
+.backpack3 {
+    left: 400px;
+    top: 157px;
+}
+.backpack4 {
+    left: 400px;
+    top: 219px;
+}
+.backpack5 {
+    left: 400px;
+    top: 281px;
+}
+
+.head1 {
+    left: 96px;
+    top: 140px;
+}
+.head2 {
+    left: 96px;
+    top: 162px;
+}
+
+.armor1{
+    left: 155px;
+    top: 140px;
+}
+.armor2{
+    left: 155;
+    top: 162px;
+}
+
+.feet1{
+    left: 214px;
+    top: 140px;
+}
+.feet2{
+    left: 214px;
+    top: 162px;
+}
+
+.hands-right1{
+    left: 328px;
+    top: 140px;
+}
+.hands-right2{
+    left: 328px;
+    top: 162px;
+}
+
+.hands-left1{
+    left: 273px;
+    top: 140px;
+}
+.hands-left2{
+    left: 273px;
+    top: 162px;
+}
+
+.ally1{
+    left: 27px;
+    top: 192px;
+}
+.ally2{
+    left: 27px;
+    top: 213px;
+}
+.ally3{
+    left: 27px;
+    top: 234px;
+}
+
+.extra1{
+    left: 89px;
+    top: 258px;
+}
+.extra2{
+    left: 151px;
+    top: 258px;
+}
+.extra3{
+    left: 213px;
+    top: 258px;
+}
+.extra4{
+    left: 275px;
+    top: 258px;
+}
+.extra5{
+    left: 336px;
+    top: 258px;
+}
+.playerName {
+    position: absolute;
+    color: white;
+}
+.playerLevel {
+    position: absolute;
+    color: #22f601;
+    left: 248px;
+    top: 69px;
+    width: 44px;
+    text-align: right;
+}
+.minusLevel {
+    position: absolute;
+    left: 238px;
+    top: 96px;
+    width: 15px;
+    height: 10px;
+    cursor: pointer;
+}
+.plusLevel {
+    position: absolute;
+    left: 289px;
+    top: 96px;
+    width: 15px;
+    height: 10px;
+    cursor: pointer;
+}
+.selected {
+    border:2px solid green;
+}
+.zoom {
+    position: fixed;
+    right:0px;
+    width: 516px;
+    height: 336px;
+    -webkit-transform: rotate(90deg) translate(15px, 15px);
+    -moz-transform: rotate(90deg) translate(15px, 15px);
+    -ms-transform: rotate(90deg) translate(15px, 15px);
+    -o-transform: rotate(90deg) translate(15px, 15px);
+    transform: rotate(90deg) translate(15px, 15px);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
