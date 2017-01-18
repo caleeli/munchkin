@@ -298,7 +298,7 @@
             }
             ////////////////////////// MAIN ////////////////////////////////////
             window.data= {time:0};
-            var REFRESH_TIME = 1000;
+            var REFRESH_TIME = 2000;
             var playerName=null, playerId=null;
             var vm = new MyViewModel();
             var currentCard, currentSlot, currentDefault;
@@ -308,6 +308,20 @@
                     $(".zoom").css("background-image", event.target.style.backgroundImage);
                 }
             });
+        </script>
+
+        <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          // TODO: Replace with your project's customized code snippet
+          var config = {
+            apiKey: "AIzaSyBsS3jvdCDr1HJJ7YIMZq_H-eZfdHrwihw",
+            authDomain: "munchkin-bb523.firebaseapp.com",
+            databaseURL: "https://munchkin-bb523.firebaseio.com",
+            storageBucket: "munchkin-bb523.appspot.com",
+            messagingSenderId: "16912235946",
+          };
+          firebase.initializeApp(config);
         </script>
     </body>
 </html>
