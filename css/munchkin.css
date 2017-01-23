@@ -1,3 +1,9 @@
+html,body {
+    margin: 0px;
+    padding: 0px;
+    width:100%;
+    font-family: cursive;
+}
 .tablero {
     position: relative;
     display: inline-block;
@@ -19,14 +25,14 @@
 .trash {
     position: relative;
     display: inline-block;
-    width: 90px;
-    height: 90;
+    width: 124px;
+    height: 90px;
     background-color: gray;
 }
 .mano {
     position: relative;
     display: inline-block;
-    width: 390px;
+    width: 76px;
     height: 90;
     background-color: lightsalmon;
 }
@@ -71,6 +77,33 @@
     -ms-transform: rotate(90deg) translate(15px, 15px);
     -o-transform: rotate(90deg) translate(15px, 15px);
     transform: rotate(90deg) translate(15px, 15px);
+    left:0px;
+}
+.trash2 {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 86px;
+    height: 56px;
+    border: 1px solid black;
+    background-color: rgba(120,80,40,0.4);
+    background-size: 100% auto;
+    -webkit-transform: rotate(90deg) translate(15px, 15px);
+    -moz-transform: rotate(90deg) translate(15px, 15px);
+    -ms-transform: rotate(90deg) translate(15px, 15px);
+    -o-transform: rotate(90deg) translate(15px, 15px);
+    transform: rotate(90deg) translate(15px, 15px);
+    position: absolute;
+    left:65px;
+}
+.trash1Buttons{
+    position: absolute;
+    top: 29px;
+    left: 8px;
+}
+.trash2Buttons{
+    position: absolute;
+    top: 29px;
+    left: 73px;
 }
 .mano1 {
     background-repeat: no-repeat;
@@ -114,14 +147,20 @@ img.tablero{
     height: 56px;
     border: 1px solid black;
 }
-.character{
+.character1{
     background-size: 100% auto;
     background-repeat: no-repeat;
     position: absolute;
-    width: 111px;
-    height: 85px;
     border: 1px solid black;
     left: 92px;
+    top: 38px;
+}
+.character2{
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    border: 1px solid black;
+    left: 150px;
     top: 38px;
 }
 
@@ -146,6 +185,10 @@ img.tablero{
     top: 44px;
 }
 
+.backpack0 {
+    left: 499px;
+    top: 34px;
+}
 .backpack1 {
     left: 399px;
     top: 34px;
@@ -281,11 +324,11 @@ img.tablero{
     right:0px;
     width: 516px;
     height: 336px;
-    -webkit-transform: rotate(90deg) translate(15px, 15px);
-    -moz-transform: rotate(90deg) translate(15px, 15px);
-    -ms-transform: rotate(90deg) translate(15px, 15px);
-    -o-transform: rotate(90deg) translate(15px, 15px);
-    transform: rotate(90deg) translate(15px, 15px);
+    -webkit-transform: rotate(90deg) translate(0px, -90px);
+    -moz-transform: rotate(90deg) translate(0px, -90px);
+    -ms-transform: rotate(90deg) translate(0px, -90px);
+    -o-transform: rotate(90deg) translate(0px, -90px);
+    transform: rotate(90deg) translate(0px, -90px);
     background-repeat: no-repeat;
     background-size: 100% auto;
 }

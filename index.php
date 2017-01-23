@@ -107,8 +107,8 @@
                             currentDefault = '';
                             return;
                         }
-                        self[name](currentCard);
                         currentSlot(currentDefault);
+                        self[name](currentCard);
                         currentCard='';
                         $(".selected").removeClass("selected");
                     });
@@ -184,8 +184,8 @@
                             $(".selected").removeClass("selected");
                             return;
                         }
-                        self.mano.push(currentCard);
                         currentSlot(currentDefault);
+                        self.mano.push(currentCard);
                         currentCard='';
                     });
                 }
@@ -193,15 +193,16 @@
                     transaction(function(){
                         var name = event.target.getAttribute("name");
                         if(!currentCard) {
-                            $(".selected").removeClass("selected");
+                            /*$(".selected").removeClass("selected");
                             $(event.target).addClass("selected");
                             currentCard = self[name]();
                             currentSlot = self[name];
-                            currentDefault = '';
+                            currentDefault = '';*/
                             return;
                         }
-                        self[name](currentCard);
+                        name = currentCard.indexOf("Treasures")!=-1? 'tesoros':'puertas';
                         currentSlot(currentDefault);
+                        window.data[name].unshift(currentCard);
                         currentCard='';
                         $(".selected").removeClass("selected");
                     });
@@ -259,10 +260,10 @@
                 }
                 if(typeof data.manos[playerId] ==='undefined') {
                     data.manos[playerId] = [];
-                    for(var j=0;j<5;j++) {
+                    for(var j=0;j<window.INITIAL_CARDS;j++) {
                         data.manos[playerId].push(data.puertas.pop());
                     }
-                    for(var j=0;j<5;j++) {
+                    for(var j=0;j<window.INITIAL_CARDS;j++) {
                         data.manos[playerId].push(data.tesoros.pop());
                     }
                 }
@@ -298,7 +299,8 @@
             }
             ////////////////////////// MAIN ////////////////////////////////////
             window.data= {time:0};
-            var REFRESH_TIME = 2000;
+            window.INITIAL_CARDS = 4;
+            var REFRESH_TIME = 5000;
             var playerName=null, playerId=null;
             var vm = new MyViewModel();
             var currentCard, currentSlot, currentDefault;
@@ -308,6 +310,35 @@
                     $(".zoom").css("background-image", event.target.style.backgroundImage);
                 }
             });
+
+            function moveCard(action, card, to) {
+                $.ajax({
+                    url: 'log.php',
+                    data: {
+                        move: window.currentMove,
+                        action: action,
+                        card: card,
+                        to: to
+                    },
+                    dataType: 'json',
+                    success: function(pack) {
+                        var data = pack.data;
+                        window.currentMove = pack.currentMove;
+                        for(var i=0,l=data.length;i<l;i++) {
+                            var target = vm;
+                            if(data[i].to.indexOf(".")!=-1) {
+                                //var ids =
+                            } else if(data[i].to=='puertas') {
+                                target = window.data[data[i].to];
+                            } else if(data[i].to=='tesoros') {
+                                target = window.data[data[i].to];
+                            } else {
+                                target = vm[data[i].to];
+                            }
+                        }
+                    }
+                });
+            }
         </script>
 
         <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
