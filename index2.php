@@ -3,6 +3,8 @@
         <link rel="stylesheet" type="text/css" href="css/munchkin.css?t=<?=filemtime('css/munchkin.css')?>" />
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/knockout/dist/knockout.js"></script>
+        <link rel="shortcut icon" type="image/png" href="/munchkin1.png"/>
+        <title>Munchkin</title>
     </head>
     <body>
         <div>
