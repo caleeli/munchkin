@@ -102,12 +102,12 @@ function Tablero(index) {
     }
     this.minusLevel = function () {
         transaction(function () {
-            self.level(self.level() - 1);
+            setLevel(index, self.level() - 1);
         });
     }
     this.plusLevel = function () {
         transaction(function () {
-            self.level(self.level() + 1);
+            setLevel(index, self.level() + 1);
         });
     }
 }
@@ -184,6 +184,12 @@ function addPlayerDo(name) {
         }
     });
     initialDrawCard(vm.players().length - 1);
+}
+function setLevel(player, level) {
+    window.moves.push({action: 'setLevelDo', arguments: [player, level]});
+}
+function setLevelDo(player, level) {
+    vm.players()[player].level(level);
 }
 function addCard(name, target) {
     window.moves.push({action: 'addCardDo', arguments: [name, target]});
@@ -418,7 +424,7 @@ function refresh() {
 ////////////////////////// MAIN ////////////////////////////////////
 window.counter = 0;
 window.moves = [];
-var REFRESH_TIME = 5000;
+var REFRESH_TIME = 2000;
 var playerName = null, playerId = null;
 var vm = new MyViewModel();
 $("body").mousemove(function (event) {
