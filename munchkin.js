@@ -26,6 +26,7 @@ function Tablero(index) {
     this.name = ko.observable("");
     this.level = ko.observable(1);
     this.gold = ko.observable(0);
+    this.goldPre = ko.observable(0);
     this.class1 = ko.observable();
     this.class2 = ko.observable();
     this.class3 = ko.observable();
@@ -100,6 +101,9 @@ function Tablero(index) {
             }
         });
     }
+    this.setGold = function() {
+        setGold(index, self.goldPre());
+    };
     this.minusLevel = function () {
         transaction(function () {
             setLevel(index, self.level() - 1);
@@ -190,6 +194,13 @@ function setLevel(player, level) {
 }
 function setLevelDo(player, level) {
     vm.players()[player].level(level);
+}
+function setGold(player, gold) {
+    window.moves.push({action: 'setGoldDo', arguments: [player, gold]});
+}
+function setGoldDo(player, gold) {
+    vm.players()[player].gold(gold);
+    vm.players()[player].goldPre(gold);
 }
 function addCard(name, target) {
     window.moves.push({action: 'addCardDo', arguments: [name, target]});

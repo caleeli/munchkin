@@ -39,7 +39,8 @@
                 <div class="tablero">
                     <img class="tablero" src="img/table.jpg">
                     <div class="playerName" data-bind="text: name"></div>
-                    <input class="playerGold" data-bind="textInput: gold" />
+                    <div class="playerGold"><input data-bind="textInput: goldPre" /><button type="button" data-bind="click: setGold">set</button></div>
+                    
                     <div class="playerLevel" data-bind="text: level"></div>
                     <div class="minusLevel" data-bind="click: minusLevel"></div>
                     <div class="plusLevel" data-bind="click: plusLevel"></div>
