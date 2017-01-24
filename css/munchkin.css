@@ -292,6 +292,18 @@ img.tablero{
     position: absolute;
     color: white;
 }
+.playerGold {
+    position: absolute;
+    color: #22f601;
+    left: 248px;
+    top: 49px;
+    width: 44px;
+    text-align: right;
+    background-color: gold;
+    color: red;
+    width: 4em;
+    border: none;
+}
 .playerLevel {
     position: absolute;
     color: #22f601;
